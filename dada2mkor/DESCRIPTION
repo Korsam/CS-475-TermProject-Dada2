@@ -1,0 +1,54 @@
+Package: dada2
+Type: Package
+Title: Accurate, high-resolution sample inference from amplicon sequencing data
+Description: A singular tweak to potentially improve performance of the dada2 package. Not associated with actual dada2 team.
+Version: 1.10.0
+Date: 2018-10-10
+Maintainer: Matthew Korsa <mkor@rams.colostate.edu>
+Author: Matthew Korsa <mkor@rams.colostate.edu>
+License: LGPL-3
+LazyLoad: yes
+Depends:
+    R (>= 3.2.0),
+    Rcpp (>= 0.11.2),
+    methods (>= 3.2.0)
+Imports:
+    Biostrings (>= 2.42.1),
+    ggplot2 (>= 2.1.0),
+    data.table (>= 1.9.4),
+    reshape2 (>= 1.4.1),
+    ShortRead (>= 1.32.0),
+    RcppParallel (>= 4.3.0),
+    parallel (>= 3.2.0),
+    IRanges (>= 2.6.0),
+    XVector (>= 0.16.0),
+    BiocGenerics (>= 0.22.0)
+Suggests:
+    BiocStyle,
+    knitr,
+    rmarkdown
+LinkingTo:
+    Rcpp,
+    RcppParallel
+SystemRequirements: GNU make
+VignetteBuilder: knitr
+biocViews: Microbiome, Sequencing, Classification, Metagenomics
+URL: http://benjjneb.github.io/dada2/
+BugReports: https://github.com/benjjneb/dada2/issues
+LazyData: true
+Collate:
+    'RcppExports.R'
+    'allClasses.R'
+    'allPackage.R'
+    'chimeras.R'
+    'dada.R'
+    'errorModels.R'
+    'filter.R'
+    'misc.R'
+    'multiSample.R'
+    'paired.R'
+    'plot-methods.R'
+    'sequenceIO.R'
+    'show-methods.R'
+    'taxonomy.R'
+RoxygenNote: 6.0.1
