@@ -1,0 +1,52 @@
+
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #########################################################
+> ###             Example 4: fastq files                ###
+> ###                                                   ###
+> ###      Standard dada2 batch file for myPhyloDB      ###
+> ###       Advanced users, may wish to change the      ###
+> ###   pipeline; however, please note that file names  ###
+> ###       will need to be changed accordingly.        ###
+> ###                                                   ###
+> ###        created for: myPhyloDB v1.2.1              ###
+> ###              www.myphylodb.org                    ###
+> ###        created by: Daniel K. Manter               ###
+> ###              daniel.manter@ars.usda.gov           ###
+> ###        date: August 23, 2017                      ###
+> #########################################################
+> 
+> 
+> 
+> ################### Check and load for required packages ###############
+> .cran_packages <-  c("ggplot2", "gridExtra", "Biostrings")
+> .bioc_packages <- c("dada2", "phyloseq")
+> sapply(c(.cran_packages, .bioc_packages), require, character.only=TRUE)
+   ggplot2  gridExtra Biostrings      dada2   phyloseq 
+     FALSE       TRUE      FALSE      FALSE      FALSE 
+> #########################################################################
+> 
+> 
+> ############################# Get data ##################################
+> set.seed(100)
+> path <- ('mothur/temp')
+> dir.create('mothur/temp/Forward')
+> dir.create('mothur/temp/Reverse')
+> 
+> file_info <- read.csv('mothur/temp/temp.files', sep='\t', header=FALSE)
